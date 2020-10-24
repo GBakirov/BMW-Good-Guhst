@@ -439,6 +439,9 @@ hr{
   .container{
     padding: 0 5px;
   }
+  .menu-toggler{
+    right: 0;
+  }
   .header-blog__title{
     font-size: 45px;
     line-height: 27px;
