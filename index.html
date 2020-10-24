@@ -21,13 +21,24 @@
             <img class="logo" src="img/icon-logo.svg" alt="logo">
           </a>
           <nav class="navbar">
-            <ul class="navbar__list">
+            <ul class="navbar__list navbar-close">
               <li class="navbar__item"><a href="#Moto" class="text navbar__link">Moto</a></li>
               <li class="navbar__item"><a href="#Design" class="text navbar__link">Design</a></li>
               <li class="navbar__item"><a href="#Gallery" class="text navbar__link">Gallery</a></li>
               <li class="navbar__item"><a href="#The-Museum" class="text navbar__link">The museum</a></li>
               <li class="navbar__item"><a href="#Visit" class="text navbar__link">Visit</a></li>
             </ul>
+            <!-- MENU-TOGGLE_RESPONSIVE -->
+            <div class="menu-toggler">
+              <svg id="menu-toggle" class="ham hamRotate ham7" viewBox="0 0 100 100" width="60"
+                >
+                <path class="line top"
+                  d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+                <path class="line middle" d="m 70,50 h -40" />
+                <path class="line bottom"
+                  d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+              </svg>
+            </div>
           </nav>
         </section>
         <div class="header-blog">
@@ -46,114 +57,9 @@
       </div>
     </div>
   </header>
+
   <!-- MAIN-CONTENT -->
-  <main class="main-content">
-    <div class="container">
-      <section id="Moto">
-        <!-- SECTION-TITLE -->
-        <div class="section__title">
-          <img class="section__img" src="img/icon-wheel.svg" alt="">
-          <p class="text section__text">Moto</p>
-        </div>
-        <div class="moto__info">
-          <h2 class="title moto__title">
-            Good Ghost: Kingston Customs’ extraordinary BMW R100
-          </h2>
-          <div class="moto__info-blog1">
-            <img class="moto__img" srcset="img/moto-photo2.png 1x, img/moto-photo2@2x.png 2x" src="img/moto-photo2.png"
-              alt="photo-of Moto" width="650" height="366">
-            <p class="text moto__info-text">
-              Dirk Oehlerking has a portfolio of incredible builds, but there are two machines that stand out. They are
-              the White Phantom and Black Phantom—two classic BMW boxers, with exquisite hand-formed bodywork and an
-              unusual art deco vibe.
-            </p>
-          </div>
-          <div class="moto__info-blog1">
-            <p class="text moto__info-text">
-              Dirk Oehlerking has a portfolio of incredible builds, but there are two machines that stand out. They are
-              the White Phantom and Black Phantom—two classic BMW boxers, with exquisite hand-formed bodywork and an
-              unusual art deco vibe.
-            </p>
-            <img class="moto__img2" srcset="img/moto-photo3.png 1x, img/moto-photo3@2x.png 2x" src="img/moto-photo3.png"
-              alt="photo-of Moto" width="650" height="366">
-          </div>
-          <!-- SITE-DIVIDER -->
-          <div class="site__divider">
-            <span class="divider__circle"></span>
-            <span class="divider__circle"></span>
-            <hr>
-          </div>
-          <h2 class="title moto__title">
-            How did the idea of creating a third Phantom come about?
-          </h2>
-          <div class="moto__info-blog1">
-            <div class="moto__info-blog-text">
-              <p class="text moto-info__text">
-                Dirk never really planned to build a third Phantom. He originally set out to build just one, but the request came from a source impossible to ignore: the renowned custom motorcycle patron and collector, Bobby Haas.
-              </p>
-              <p class="text moto-info__text">
-                “In 2019, the Distinguished Gentleman’s Ride in Dallas took place at the Haas Moto Museum,” Dirk tells us. “The White Phantom and Black Phantom were the main attraction in the museum that weekend. That honored and touched me very much.”
-              </p>
-              <img class="moto__text-img" src="img/wheel.svg" alt="" >
-            </div>
-            <img class="moto-info__img" srcset="img/moto-photo4.png 1x, img/moto-photo4@2x.png 2x" src="img/moto-photo4.png"
-              alt="photo-of Moto" width="570" height="854">
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__text">
-        <div class="team">
-          <h2 class="title footer__title">
-            Team
-          </h2>
-          <div class="text footer__text team__info">
-            <p class="team__item">Bobby Haas - Museum Founder & Curator</p>
-            <p class="team__item">Stacey Mayfield - Museum Director</p>
-            <p class="team__item">Nancy Armenta - Executive Assistant to Founder & Director</p>
-            <p class="team__item">Brent Graves - Facilities Manager</p>
-            <p class="team__item">Dawn Lee - Marketing Manager</p>
-            <p class="team__item">Chris "Sparky" Williamson - Museum Engineer </p>
-          </div>
-        </div>
-        <div class="contact">
-          <h2 class="title footer__title">
-            Contact Us
-          </h2>
-          <div class="text footer__text contact__info">
-            <a class="contact__link">Phone: (972) 685-3051</a>
-            <a class="contact__link" href="mailto:info@haasmg.com" target="_blank">Email: info@haasmg.com</a>
-          </div>
-          <div class="contact__social-set">
-            <a href="#" class="contact__social-set-link">
-              <img class="contact__social-set-icon" src="img/icon-instagram.svg" alt="logo of instagram">
-            </a>
-            <a href="#" class="contact__social-set-link">
-              <img class="contact__social-set-icon" src="img/icon-facebook.svg" alt="logo of facebook">
-            </a>
-            <a href="#" class="contact__social-set-link">
-              <img class="contact__social-set-icon" src="img/icon-youtube.svg" alt="logo of youtube">
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="footer_logo-helper">
-      <div class="footer__logo">
-        <a href="index.html" class="footer__logo-link">
-          <img srcset="img/footer__logo.png 1x, img/footer__logo@2x.png 2x" src="img/footer__logo.png"
-            alt="logo of Museum">
-        </a>
-      </div>
-    </div>
-
-  </footer>
   <script src="js/jQuery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/app.js"></script>
