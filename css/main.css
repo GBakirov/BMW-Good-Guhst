@@ -1,6 +1,7 @@
 :root{
   --main-text-color- : #c7c5c4;
   --box-shadow-: 0px 5px 50px 10px rgba(0, 0, 0, 0.2);
+  --main-divider-color-:#929EA1;;
 }
 /* FONTS */
 @font-face {
@@ -179,6 +180,7 @@ img{
   top: 30px;
   right: 20px;
   z-index: 16;
+  background-color: #24282A;
 }
 .ham {
   cursor: pointer;
@@ -238,16 +240,24 @@ img{
   margin-right: 10px;
 }
 /* MOTO-INFO */
-.moto__info-blog1{
+.moto__info-blog1,
+.moto__info-blog2{
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
   margin-bottom: 90px;
 }
-
+.moto__info-blog1{
+  align-items: flex-start;
+}
+.moto__info-blog2{
+  align-items: flex-end;
+}
 .moto__title{
   width: 75%;
   margin-bottom: 50px;
+}
+.moto__info-divider{
+  display: none;
 }
 .moto__img{
   margin-right: 60px;
@@ -262,8 +272,9 @@ img{
   position: relative;
   margin-bottom: 85px;
 }
-hr{
+.site-divider hr{
   height: 2px;
+  background-color: var(--main-divider-color-);
 }
 .divider__circle:nth-child(1){
   position: absolute;
@@ -272,7 +283,7 @@ hr{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--main-text-color-);
+  background-color: var(--main-divider-color-);
 }
 .divider__circle:nth-child(2){
   position: absolute;
@@ -281,7 +292,7 @@ hr{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--main-text-color-);
+  background-color: var(--main-divider-color-);
 }
 .moto__info-blog-text{
   width: 40%;
@@ -290,13 +301,101 @@ hr{
 .moto-info__text:nth-child(1){
   margin-bottom: 40px;
 }
-.moto-info__text:nth-child(2){
+.moto-info__text:nth-child(3){
   margin-bottom: 144px;
 }
 .moto__text-img{
   mix-blend-mode: multiply;
-  transform: rotate(-90deg);
+}
+.moto-info__photo{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: auto;
+}
+.moto-info__title{
+  font-size: 36px;
+  line-height: 54px;
+}
+.moto-info__divider{
+  margin: 40px 0;
+}
+.moto__info-blog1-text{
+  width: 45%;
+}
+/* TRANSPARENT DIVIDER */
+.moto-site__divider{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.moto-site__divider hr{
+  height: 2px;
+  width: 92%;
+  background-color: var(--main-divider-color-);
+}
+.divider-circle--transparent:nth-child(1),
+.divider-circle--transparent:nth-child(2){
+  position: absolute;
+  top: 12px;
+  width: 11px;
+  height: 11px;
+  border: 2.75px solid var(--main-divider-color-);
+  border-radius: 50%;
+  background-color: #24282A;
+}
+.divider-circle--transparent:nth-child(1){
+  left: 11px;
+}
+.divider-circle--transparent:nth-child(2){
+  right: 11px;
+}
+.divider-circle--transparent:nth-child(3){
+  position: absolute;
+  top: 9px;
+  left: 47%;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--main-divider-color-);
+  border-radius: 50%;
+  background-color: #24282A;
+}
+.moto-info__divider-title{
+  margin: 10px auto;
+  width: 82%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 35px;
+}
+.moto-info__img{
   box-shadow: var(--box-shadow-);
+}
+/* STAGE 4*/
+.stage-4__title{
+  margin-bottom: 50px;
+}
+.moto__info-blog2-text{
+  width: 35%;
+  margin-right: auto;
+}
+.moto__info-blog-text-img{
+  opacity: 0.5;
+}
+.moto-info__blog2-text{
+  margin: 0;
+  margin-top: 25px;
+}
+.moto__info-blog2-right{
+  width: 63%;
+}
+.moto__info-blog2-title{
+  padding: 25px 0;
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 35px;
+  border-top: 1px solid #929EA1;
+  border-bottom: 1px solid #929EA1;
 }
 /* FOOTER */
 .footer{
@@ -377,12 +476,40 @@ hr{
     width: 77%;
     box-shadow: var( --box-shadow-);
   }
+  .moto__title{
+    width: 100%;
+  }
+  .moto__img,
+  .moto__img2{
+    width: 50%;
+  }
+  .moto__img{
+    margin-right: 10px;
+  }
+  .moto__img2{
+    margin-left: 10px;
+  }
+}
+@media (max-width: 970px){
+  .moto__info-blog-text{
+    width: 49%;
+  }
+  
+  .moto-info__text:nth-child(1) {
+    margin-bottom: 20px;
+  }
+  .moto-info__text:nth-child(3){
+    margin-bottom: 30px;
+  }
+  .moto-info--photo{
+    width: 50%;
+  }
 }
 @media (max-width: 790px){
   .header-blog__title {
     font-size: 70px;
     line-height: 85px;
-}
+  }
   .navbar__list{
     position: fixed;
     top: 0;
@@ -417,22 +544,67 @@ hr{
   .menu-toggler{
     display: block;
   }
-  @media (max-width: 737px){
-    .header-blog{
-      text-align: left;
-    }
-    .header-blog__text{
-      margin-bottom: 20px;
-    }
-    .header-blog__button{
+  .moto__info-blog-text{
+    text-align: center;
+  }
+  .moto-info__text{
+    text-align: left;
+  }
+  .moto__text-img{
+    width: 70%;
+  }
+}
+@media (max-width: 737px){
+  .header-blog{
+    text-align: left;
+  }
+  .header-blog__text{
+    margin-bottom: 20px;
+  }
+  .header-blog__button{
+    position: absolute;
       position: absolute;
-        position: absolute;
-        top: -114px;
-        right: 80px;
-    }
-    .header-blog__img{
-      width: 100%;
-    }
+      top: -114px;
+      right: 80px;
+  }
+  .header-blog__img {
+    max-width: 120%;
+    width: 104%;
+    margin-left: -2%;;
+  }
+  .moto__info-blog2-text{
+    text-align: center;
+  }
+  .moto__info-blog-text-img{
+    width: 50%;
+  }
+  .moto-info__blog2-text{
+    text-align: left;
+  }
+  .footer__text{
+    flex-direction: column;
+  }
+  .team, .contact{
+    width: 100%;
+  }
+  .team__info, .contact__info{
+    margin-bottom: 20px;
+  }
+  .contact{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 677px){
+  .moto-info__title {
+    font-size: 24px;
+    line-height: 27px;
+  }
+  .moto__title{
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .moto__text-img{
+    display: none;
   }
 }
 @media (max-width: 600px){
@@ -452,7 +624,110 @@ hr{
     line-height: 17px;
   }
 }
+@media (max-width: 550px){
+  .site-header{
+    padding-bottom: 40px;
+  }
+  .moto__info-blog1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .moto__img,
+  .moto__img2{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .moto__img2{
+    order: -1;
+  }
+  .moto__info-blog-text{
+    width: 100%;
+  }
+  .moto__info-blog-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .moto__info-text,
+  .moto-info__text{
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .moto-info__text{
+    width: 50%;
+  }
+  .moto-info__text:nth-child(3){
+    margin-left: 50%;
+  }
+  .site__divider{
+    margin-bottom: 20px;
+  }
+  .divider__circle{
+    display: none;
+  }
+  
+  .moto__text-img{
+    display: block;
+    order: -1;
+    width: 40%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: -40%;
+  }
+  .moto__info-divider{
+    display: block;
+  }
+  .moto-info--photo{
+    order: -1;
+    margin-left: 50%;
+  }
+  .moto__info-blog1-text {
+    width: 100%;
+    order: -1;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .moto-info__text1{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .moto-info__photo{
+    width: 100%;
+    padding: 0 35px;
+  }
+  .moto__info-blog2{
+    flex-direction: column;
+  }
+  .moto__info-blog2-text{
+    width: 100%;
+  }
+  .moto__info-blog2-right{
+    width: 100%;
+    order: -1;
+  }
+  .moto___photo{
+    width: 70%;
+    margin-left: 30%;
+    margin-bottom: -3%;
+  }
+  .moto__info-blog-text-img{
+    margin-top: -38%;
+    width: 20%;
+    margin-left: -70%;
+  }
+  .moto-info__blog2-text{
+    margin-left: 30%;
+  }
+}
 @media (max-width: 460px){
+  .header-top{
+    margin-bottom: 45px;
+  }
   .header-blog__title{
     font-size: 24px;
     line-height: 27px;
@@ -464,10 +739,23 @@ hr{
     margin-bottom: 10px;
   }
   .header-blog__button{
-    top: -108px;
+    top: -83px;
     right: 74px;
     width: 120px;
     height: 38px;
+  }
+  .moto-info__text{
+    width: 70%;
+  }
+  .moto-info__text:nth-child(3){
+    margin-left: 30%;
+  }
+  .footer__title{
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .footer__text{
+    font-size: 15px;
   }
 }
   /* KEYFRAMES */
@@ -485,5 +773,16 @@ hr{
   }
   to{
     transform: translateY(-100%);
+  }
+}
+@keyframes rounding{
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
   }
 }
