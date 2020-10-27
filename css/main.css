@@ -180,6 +180,7 @@ img{
 /* Menu-Toggler */
 .menu-toggler{
   display: none;
+  margin-right: 10px;
   position: fixed;
   top: 30px;
   right: 20px;
@@ -373,9 +374,7 @@ img{
   font-size: 26px;
   line-height: 35px;
 }
-.moto-info__img{
 
-}
 /* STAGE 4*/
 .stage-4__title{
   margin-bottom: 50px;
@@ -604,6 +603,123 @@ img{
 .section-inner__blog8-right-img{
   width: 47%;
 }
+/* DESIGN SECTION END */
+/* GALLERY SECTION */
+.gallery-table{
+  padding-top: 15px;
+  background-color: var(--main-text-color-);
+}
+.gallery-table__list{
+  max-width: 1440px;
+  padding: 55px;
+  padding-top: 25px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-table__item{
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery-table__item:hover .gallery-teble__item-img{
+  transform: scale(1.1);
+}
+.gallery-table__item:nth-child(5),
+.gallery-table__item:nth-child(10),
+.gallery-table__item:nth-child(15),
+.gallery-table__item:nth-child(20),
+.gallery-table__item:nth-child(25){
+  margin-right: 0;
+}
+.gallery-table__item:nth-child(21),
+.gallery-table__item:nth-child(22),
+.gallery-table__item:nth-child(23),
+.gallery-table__item:nth-child(24),
+.gallery-table__item:nth-child(25){
+  margin-bottom: 0;
+}
+.gallery-table__link{
+  display: inline-block;
+  width: 250px;
+  text-decoration: none;
+}
+.gallery-table__item-img{
+  transition: transform 0.3s ease;
+}
+/* SLIDER GALLERY */
+.gallery-table2{
+  display: none;
+  width: 100%;
+  margin: 0 ;
+  overflow: hidden;
+  background-color: var(--main-text-color-);
+}
+.gallery-table__list2{
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.gallery-table__item2{
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.gallery-table__item2:nth-child(3),
+.gallery-table__item2:nth-child(4){
+  margin-bottom: 23px;
+}
+.gallery-table__item2:nth-child(2),
+.gallery-table__item2:nth-child(4){
+  margin-right: 0;
+}
+.gallery-table__link2{
+  display: inline-block;
+  width: 140px;
+  text-decoration: none;
+}
+.slick-initialized .slick-slide{
+  display: flex;
+}
+.slick-dots {
+  display: flex;
+  margin-left: 35%;
+  list-style-type: none;
+}
+.slick-dots li button::before{
+  display: none;
+}
+.slick-dots li{
+  width: 10px;
+  height: 10px;
+  text-decoration: none;
+}
+.slick-dots li button{
+  width: 10px;
+  height: 10px;
+  margin-top: -35px;
+  border-radius: 50%;
+  background-color: #24282A;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.slick-dots li button:focus{
+  box-shadow: none;
+  transform: scale(1.1); 
+  opacity: 1;
+}
+.slick-slide img{
+  width: 100%;
+}
 /* FOOTER */
 .footer{
   display: inline-block;
@@ -667,6 +783,33 @@ img{
   margin: 0 auto;
 }
 /* MEDIA-QUERY */
+@media (max-width: 1440px){
+  .gallery-table__list{
+    max-width: 1240px;
+  }
+  .gallery-table__link{
+    width: 210px;
+  }
+  .gallery-table__item-img{
+    width: 100%;
+  }
+}
+@media (max-width: 1240px){
+  .gallery-table__list{
+    padding: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1170px){
+  .gallery-table__link{
+    width: 180px;
+  }
+}
+@media (max-width: 1120px){
+  .gallery-table__link{
+    width: 150px;
+  }
+}
 @media (max-width: 1000px){
   .header-blog {
     display: block;
@@ -742,6 +885,23 @@ img{
   }
   .section-inner__blog2-middle-img{
     height: 100%;
+  }
+}
+@media (max-width: 870px){
+  .gallery-table{
+    padding-top: 0;
+  }
+  .gallery-table__list{
+    padding: 10px;
+  }
+  .gallery-table__item{
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 810px){
+  .gallery-table__link{
+    width: 130px;
   }
 }
 @media (max-width: 790px){
@@ -861,6 +1021,11 @@ img{
     margin-bottom: 20px;
   }
 }
+@media (max-width: 710px){
+  .gallery-table__link{
+    width: 120px;
+  }
+}
 @media (max-width: 677px){
   .moto-info__title {
     font-size: 24px;
@@ -876,6 +1041,11 @@ img{
   .res-title{
     font-size: 35px;
     line-height: 40px;
+  }
+}
+@media (max-width: 660px){
+  .gallery-table__link{
+    width: 100px;
   }
 }
 @media (max-width: 600px){
@@ -904,6 +1074,11 @@ img{
     margin-left: 0;
     padding: 15px 0;
 
+  }
+}
+@media (max-width: 560px){
+  .gallery-table__link{
+    width: 90px;
   }
 }
 @media (max-width: 550px){
@@ -1116,9 +1291,18 @@ img{
   .section-inner__blog8-right-img{
     order: -1;
   }
+  .gallery-table{
+    display: none;
+  }
+  .gallery-table2{
+    display: block;
+  }
+  .gallery-table__link2{
+    width: 171px;
+  }
 
 }
-@media (max-width: 460px){
+@media (max-width: 459px){
   .header-top{
     margin-bottom: 45px;
   }
@@ -1148,6 +1332,13 @@ img{
     font-size: 14px;
     line-height: 18px;
   }
+  .slick-dots{
+    
+    margin-left: 25%;
+  }
+  .gallery-table__link2{
+    width: 140px;
+  }
   .footer__title{
     font-size: 17px;
     margin-bottom: 10px;
@@ -1158,6 +1349,12 @@ img{
   .res-text{
     font-size: 14px;
     line-height: 20px;
+  }
+}
+@media (max-width: 310px){
+
+  .gallery-table__link2{
+    width: 100px;
   }
 }
   /* KEYFRAMES */
