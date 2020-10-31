@@ -1,9 +1,10 @@
 $(document).ready(function () {
-  AOS.init();
-
-  $(window).on("load", function(){
+   $(window).on("load", function(){
   $('.loader').fadeOut('slow')
   })
+  AOS.init();
+
+ 
 
   $('#menu-toggle').click(function () {
     this.classList.toggle('active');
